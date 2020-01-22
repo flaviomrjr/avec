@@ -1,0 +1,32 @@
+- defaultTab: nodes
+  description: "Job utilizado para realizar um deploy \"BlueGreen\" a partir da alteraç\
+    ão do arquivo index.html  \n\n## Parametros utilizados:  \n\nVocê deve definir\
+    \ os parametros a seguir para realizar o deploy.  \n\n**candidatoname:**  \n\n\
+    Será utilizado para definir o nome do candidato no arquivo index.html: **Ex: Flavio\
+    \ Martins Rocha Junior**"
+  executionEnabled: true
+  id: 3733557a-ebb9-414c-989c-99f0a45818e3
+  loglevel: INFO
+  name: AVEC DEVOPS TESTE - BLUEGREEN DEPLOYMENT
+  nodeFilterEditable: false
+  options:
+  - description: Essa variavel define o nome do candidato que será exibido na pagina inicial
+    name: candidatoname
+    required: true
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - script: |
+        #!bin/bash
+        echo "<html><h1>Ola @option.candidatoname@</h1></html>" > /opt/challenges/DevOps/BlueGreen/index.html
+    - configuration:
+        ansible-base-dir-path: /etc/ansible/playbooks
+        ansible-become: 'true'
+        ansible-become-method: sudo
+        ansible-become-password-storage-path: keys/root_text/root_pass
+        ansible-playbook: deploy.yml
+      nodeStep: true
+      type: com.batix.rundeck.plugins.AnsiblePlaybookWorflowNodeStep
+    keepgoing: false
+    strategy: node-first
+  uuid: 3733557a-ebb9-414c-989c-99f0a45818e3

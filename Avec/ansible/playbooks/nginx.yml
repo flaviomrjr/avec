@@ -1,0 +1,9 @@
+---
+- name: PLAYBOOK RESTART NGINX
+  hosts: localhost
+  tasks:
+    - name: Reiniciando Nginx
+      systemd:
+        name: nginx
+        state: restarted
+

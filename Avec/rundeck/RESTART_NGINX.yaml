@@ -1,0 +1,21 @@
+- defaultTab: nodes
+  description: Job acionado pelo Jenkins para restart do nginx
+  executionEnabled: true
+  id: fabc08e4-a08f-471d-a996-9e51a3ef3676
+  loglevel: INFO
+  name: RESTART NGINX
+  nodeFilterEditable: false
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - configuration:
+        ansible-base-dir-path: /etc/ansible/playbooks
+        ansible-become: 'true'
+        ansible-become-method: sudo
+        ansible-become-password-storage-path: keys/root_text/root_pass
+        ansible-playbook: nginx.yml
+      nodeStep: true
+      type: com.batix.rundeck.plugins.AnsiblePlaybookWorflowNodeStep
+    keepgoing: false
+    strategy: node-first
+  uuid: fabc08e4-a08f-471d-a996-9e51a3ef3676

@@ -1,0 +1,18 @@
+---
+- name: PLAYBOOK DEPLOY AVEC
+  hosts: localhost
+  tasks:
+    - name: Build Container
+      docker_container:
+        name: "{{ item.nome }}"
+        image: httpd:alpine
+        state: started
+        volumes:
+        - "{{ item.volume }}:/usr/local/apache2/htdocs/"
+      loop:
+      - { nome: blue, volume: /opt/blue }
+      - { nome: green, volume: /opt/green }
+
+    - name: Update Repo
+      shell: "sh /opt/challenges/DevOps/BlueGreen/repo.sh"
+
