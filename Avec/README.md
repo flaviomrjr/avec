@@ -1,8 +1,8 @@
-Manual Desafio DevOps Avec
+AVEC - CI/CD
 ==========================
 
-BLUEGREEN DEPLOYMENT - CI/CD
-----------------------------
+BLUEGREEN DEPLOYMENT
+--------------------
 
 **Passo 1**
 
