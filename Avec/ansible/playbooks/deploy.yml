@@ -14,5 +14,5 @@
       - { nome: green, volume: /opt/green }
 
     - name: Update Repo
-      shell: "sh /opt/challenges/DevOps/BlueGreen/repo.sh"
+      shell: "sh /opt/ci-cd/Avec/repo.sh"
 

@@ -5,7 +5,7 @@
 
 - name: Atualizando INDEX.HTML
   copy:
-    src: "{{ lookup('env','WORKSPACE_JENKINS') }}/DevOps/BlueGreen/index.html"
+    src: "{{ lookup('env','WORKSPACE_JENKINS') }}/Avec/index.html"
     dest: "{{ item.dest }}"
   when: ambiente.stat.exists == item.cond
   loop  :
