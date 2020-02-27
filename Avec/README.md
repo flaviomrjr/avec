@@ -18,7 +18,7 @@ Clique no projeto **"AVEC"** e em seguida clique no job **"AVEC DEVOPS TESTE - B
 
 **Passo 4**
 
-Digite o nome do candidato no campo **"candidatoname"** e clique no botão **"Run Job Now"**
+Digite o nome do candidato no campo **"candidatoname"** e clique no botão **"Run Job Now" em inglês**
 
 **Passo 5**
 
