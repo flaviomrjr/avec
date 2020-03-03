@@ -33,4 +33,4 @@ DIAGRAMA CI/CD
 
 Verifique como foi configurado o processo de CI/CD no diagrama:
 
-![IMAGEM GIT](https://github.com/flaviomrjr/ci-cd/blob/master/Avec/DIAGRAMA-BLUEGREEN.jpg?raw=true)
+![IMAGEM GIT](https://github.com/flaviomrjr/avec/blob/master/DIAGRAMA-BLUEGREEN.jpg?raw=true)
